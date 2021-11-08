@@ -1,0 +1,227 @@
+:root {
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-color: #909090;
+    --grey-color: #e0e0e0;
+    --grey-dark-color:#789090;
+    /* Size */
+    --side-padding:12px;
+    --avatar-size : 36px;
+
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto;
+}
+ul{
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+button,
+button:focus{
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--side-padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+header .logo{
+    font-size: var(--font-large);
+}
+header .logo .fa-youtube{
+    color: var(--red-color);
+}
+header .icons .fa-search{
+    margin-left: var(--side-padding)
+}
+
+/* Video */
+.player{
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: black;
+}
+body > .info {
+    padding: var(--side-padding);
+}
+
+.player video{
+    width: 100%;
+    height: 100;
+    max-width:1000px;
+}
+
+.info .metadata .hashtags{
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+.info .metadata .hashtags li {
+    margin-right: var(--side-padding);
+    padding: var(--side-padding);
+}
+.info .metadata .titleAndButton{
+    display: flex;
+}
+.info .metadata .titleAndButton .title{
+    font-size: var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--side-padding);
+}
+.info .meatadata .titleAndButton .moreBtn{
+    height: 100%;   
+}
+.info .views{
+    font-size: var(--font-small);
+    color: #78909c
+}
+
+/* Action */
+.info .actions{
+    display: flex;
+    justify-content: space-around;
+    margin: var(--side-padding);
+
+}
+.info .actions button{
+    display: flex;
+    flex-direction:column;
+    font-size: var(--font-small);
+    background-color: white;
+}
+
+.info .actions button .fa-thumbs-up{
+    margin-bottom: var(--side-padding); 
+    font-size: 20px;
+    margin: 0 auto;
+}
+.info .actions button .fa-thumbs-down{
+    margin-bottom: var(--side-padding);
+    font-size: 20px;
+    margin: 0 auto;
+}
+.info .actions button .fa-share{
+    margin-bottom: var(--side-padding);
+    font-size: 20px;
+    margin: 0 auto;
+}
+.info .actions button .fa-plus{
+    margin-bottom: var(--side-padding);
+    font-size: 20px;
+    margin: 0 auto;
+}
+.info .actions button .fa-font-awesome-flag{
+    margin-bottom: var(--side-padding);
+    font-size: 20px;
+    margin: 0 auto;
+}
+.info .actions button .fa-thumbs:hover{
+    background-color: var(--blue-color);
+}
+
+/* Channel Description */
+.info .channel{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #cfd8dc;
+    border-bottom: 1px solid #cfd8dc ;
+
+}
+.info .channel .metadata{
+    display: flex;
+    align-items: center;
+}
+.info .channel .metadata img{
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+.info .channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+}
+.info .channel .metadata .info .name{
+    font-size: var(--font-medium);
+}
+.info .channel .metadata .subscribers{
+    font-size: var(--font-small);
+    color: #78909c;
+}
+.info .channel .subscribe{
+    color: var(--red-color);
+    font-size: var(--font-medium);
+    background-color: var(--white-color);
+    font-weight: 700;
+    margin-right: var(--side-padding);
+}
+
+/* Up Next */
+.upNext {
+    padding: 0 var(--side-padding);
+}
+.upNext > .title{
+    font-size: var(--font-medium);
+    color:var(--grey-dark-color);
+    margin-bottom: calc(var(--side-padding) /2 );
+}
+.upNext .item{
+    display: flex;
+    margin-top: var(--side-padding);
+}
+.upNext .item img{
+    flex: 1 1 35%;
+}
+.upNext .item .info{
+    flex: 1 1 60%;
+}
+.upNext .item .moreBtn{
+    flex: 1 1 5%;
+    background-color: var(--white-color);
+}
+.upNext .item .img img{
+    width: 100%;
+}
+
+.upNext .item .info{
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--side-padding);
+}
+.upNext .item .info .title{
+    font-size: var(--font-small);
+}
+.upNext .item .info .name{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.upNext .item .info .views {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
